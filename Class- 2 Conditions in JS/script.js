@@ -249,7 +249,127 @@ console.log('jsi shree ram');
 
 
 
-//Tornary Operator ? : ---- Eska use ham ? or : lagakar karte hai ye bhi condition hi set karta hai ye operator condition set karne ka sabse short tarika hai.
+//---- Tornary Operator ? : ---- Eska use ham ? or : lagakar karte hai ye bhi condition hi set karta hai ye operator condition set karne ka sabse short tarika hai.
+//Syntax --- condition ? true par run : false par run 
+//Matlab ye hai ki ham pahale condition lagaynge or fir ?operator lagynge to agar condition true hoti hai to ?operator ke bad ka code run hoga or agar condition false hoti hai to :colmn ke bad ka code run hoga.
+
+// //Exmaple --- 
+// 10>5 ? console.log('Yas') : console.log('No');//Yas
+// //yaha par ham chanck kar rhe hai ki 10 bada hai 5 se to true huaa to Yes print hoga nhi to No print hoga.To kuchh es tarike se ye kam karta hai samjhe.
+
+// //Example 2 --- 
+// let a = 'Aadivasi';//Aadivasi ka matlab hai jangali ensan;
+// a === 'Aadivasi' ? console.log('HoHaHoHoHaHo') : console.log('Hello Nice to meet you');//HoHaHoHoHaHo
+
+// console.log(1<0?'Yas':'No');//No //- yaha par ham short me conditoin use kar rhe hai.
 
 
 
+//---- Nexted Turnary Operator ---- 
+// let a = 0;
+// console.log(a>0 ? 'Positive' : a<0 ? 'Nigative' : 'zero');//zero
+//Dekho ye 2 part me ok --- sabse pahale chack hoga a > 0 agar ye false hota hai to :colen me bad ki value chalegi - To yaha par false ho jata hai ok -- Ab Jaise hi :colen ke aage code bada to usko ak or ?operator dikha jaha ak or conditon chack ho rhi hai -- ab agar ye condition bhi false hoti hai to eske bad jo :colen laga hai vo chalega - To yaha par ye bhi false ho jati hai to ab code jayga las :colen ke pas or use print kar dega. //zero. simple ab positive or nigative to chack kar hi sakte hai apne se ----
+
+
+
+
+// // ---- SWITCH ---- 
+// //ye bhi conditon ke liye hi use hota hai - eske andar ham case: ka use karte hai condition chack karne ke liye.
+
+// //Example -- 
+// let day = 1;
+// //switch ke andar ham conditin nhi de sakte hai ham bas value ko mach kar sakte hai bas or kuchh nhi kar sakte hai.
+
+// switch(day){//yaha par jo variable hai vahi pass karna hoga.
+//     case 1: console.log('Sunday'); 
+//     break
+
+//     case 2: console.log('Monday'); 
+//     break
+
+//     case 3: console.log('Tuesday'); 
+//     break   
+
+//     default : console.log('Kuchh nhi hai!');
+// }//Sunday
+
+// //ab yaha par Sunday kprint hoga lekin kyu kaise or ham break kyu laga rhe hai ? --- 
+// //Dekho sabse pahale day pairamiter me day ki value 1 aaygi ok uske bad bari bari se jitne case hai sabse use match karaya jayga jisase mach hogi vo case run ho jayga or apni value ko print kar dega. koe case nhi mach hoga to default vali value print hogi.
+// //Ab break kyu laga hai agar ham break nhi lagate hai -- To ye rukta nhi hai matlab - esne chack kiya ki kya day me jo value 1 hai vahi value 1st case me hai to 1st case true ho jayga or vo sunday ko print kar dega.Yani break ki vajaha se vo vapas chala jayga lekin agar break nhi laga hai to vo aage badh jayga or dusri value ko bhi run kar dega or agar vaha break laga hoga to vha se vapas aajayga or kahi break nhi laga hoga to sabko print kar dega.
+
+// switch(day){
+//     case 1: console.log('Sunday'); 
+ 
+//     case 2: console.log('Monday'); 
+
+//     case 3: console.log('Tuesday'); 
+//     break
+
+//     default : console.log('Kuchh nhi hai!');
+// }
+// //yaha par 3rd case par break laga hai upar nhi laga hai ab ye 3no value ko print karega;
+// // Sunday
+// // Monday
+// // Tuesday
+// //break nhi milta to sabko print karta .
+
+
+// //Ab if else and swich me antar kya hai dekh lete hai -- Jo kam Switch kar sakta hai vo sara kam if else bhi kar sakta hai lekin jo jo kam if else kar sakta hai vo vo kam switch nhi kar sakta hai.
+
+
+//AB AGAR HAM CODITOIN LAGAY KI CHAHE VALUE HAM 1 DE YA 2 YA 3 DE HAME PRINT BAS SUNDAY HI KARNA HAI MATLAB HAME USER 1,2,3 EN TINO ME SE KUCHH BHI DE HAME USE BAS SUNDAY DIKHNA HAI 4 DEGA TO KUCHH NHI DIKHANA HAI HAME BAS 1,2,3 SE MATLAB HAI.
+
+// //Example --- 
+// let x = 3;//yaha par ham ab 1 ,2 ,3 kuchh bhi de hame result me sirf Sunday hi milega.
+
+// switch(x){
+//     case 1:
+//     case 2:
+//     case 3: 
+//         console.log('Sunday');
+//         break;
+
+//     case 4:
+//     case 5:
+//     case 6: 
+//         console.log('Saterday');
+//         break;
+
+//     default: console.log('Kuchh nhi');
+// }
+
+
+
+// //ham esme ocnditoin nhi de sakte hai lekin condition dene ka bhi jugad hai hamare pass ---- 
+// switch(true){//ham yaha par condition nhi de sakte hai lekn vase me to de hi sakte hai.
+//     case 10>5 : 
+//         console.log('Yas');
+//         break
+    
+//     case 10<5 : 
+//         console.log('No');
+//         break
+
+//     default : console.log('Kuchh nhi');
+// }//Yas
+
+// //agar dono conditoin true ho jaygi to ? --- to jo pahale true hogi vahi chalegi.
+
+
+
+
+let num = 0.1 + 0.2;
+num = Number(num.toFixed(1));
+
+switch(num){
+    case 0.3: console.log('true');
+    break
+
+    default: console.log('Namaste');
+}//Namaste --- true aagya ab
+//yaha par Namaste kyu print ho rha hai 0.1+0.2 karegen to 0.3 aana chaiye lekin nhi agar hame ye karte hai to value . me kuchh gadab aati hai.
+console.log(0.1 + 0.2);//0.30000000000000004 // ye aati hai value esliye vo case ko ture nhi kiya hai.
+
+//ab ese fix kaise kare ? -- dekhte hai kosis karke 
+let f = 0.1 + 0.2;
+console.log(f.toFixed(1));//0.3 //- ho gya aagya hamara 0.3 bas esi ko vaha par chipka denge. lekin ese hame number me bhi convert karna hoga.
